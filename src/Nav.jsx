@@ -5,24 +5,20 @@ import {IoSearchOutline} from 'react-icons/io5'
 import {IoAddCircleOutline} from 'react-icons/io5'
 import { IoPlayForwardOutline } from 'react-icons/io5'
 import { IoPersonCircleOutline } from 'react-icons/io5'
+import { Link } from 'react-router-dom'
 
 function Nav() {
-    
-      return (
-     <>
-        <nav className='main-nav'>
-          <ul>
-             <li><a href="#"><IoHomeOutline /></a></li>
-             <li><a href="#"><IoSearchOutline /></a></li>
-             <li><a href="#"><IoAddCircleOutline /></a></li>
-                <li><a href="#"><IoPlayForwardOutline /></a></li>
-                <li><a href="#"><IoPersonCircleOutline /></a></li>
-
-          </ul>
-        </nav>
-     </>
-      )
-    }
-
+  return (
+    <nav className='main-nav'>
+      <ul>
+        <li><Link to="/"><IoHomeOutline /></Link></li>
+        <li><Link to="/search"><IoSearchOutline /></Link></li>
+        <li><Link to="/post"><IoAddCircleOutline /></Link></li>
+        <li><Link><IoPlayForwardOutline /></Link></li>
+        <li><Link to="/profile"><IoPersonCircleOutline /></Link></li>
+      </ul>
+    </nav>
+  )
+}
 
 export default Nav
